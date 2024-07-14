@@ -26,7 +26,7 @@
  - push the file to your repo.
 
 ## Exercise
-- pressure value: 
-- led blinks when:
-- led is constant when:
-- buzzer plays when: 
+- pressure value:    100 .
+- led blinks when:    when pressed, i.e., short or long press.
+- led is constant when:    in menu mode, waiting for module selection.
+- buzzer plays when:    end of long press, i.e., upon release. 

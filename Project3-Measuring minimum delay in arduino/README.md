@@ -29,24 +29,27 @@
 sample rate
  - use cursors and sample rate to measure the pulse width
  - take screenshots and add them to the README below.
-![alt text](image.png)
+
 ## Measure overhead
  - Remove the delay statements and upload the code
  - Measure pulse width. What is the overhead?
  3.5us
  - Take screenshots and add them to the README below.
- ![alt text](image-1.png)
+ 
  - delay() is limited to 1 ms. Find a function that delays 1 microsecond. 
  - Try different delays and measure the overhead.
  - Take screenshots and add them to the README below.
 10us results in 12us.
-![alt text](image-2.png)
+
 additional 0.3us for low time. 3.8us low versus 3.5 high.
-![alt text](image-3.png)
+
 ## Git
  - Commit the new README with your screenshots
  - push to your repo.
 
 ## Exercise
 Paste screenshots below.
-
+![measure the pulse width](image.png)
+![3.5us](image-1.png)
+![10us results in 12us.](image-2.png)
+![additional 0.3us for low time. 3.8us low versus 3.5 high.](image-3.png)

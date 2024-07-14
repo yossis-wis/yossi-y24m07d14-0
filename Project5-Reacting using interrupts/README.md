@@ -7,14 +7,14 @@
 
 ## Light led on button press (arduino code)
  - button pin is 6, grove led pin is 4
- - read value from button pin. If button is pressed (how can you tell?) turn grove led on. If button is not pressed, turn it off
+ - read value from button pin. If button is pressed (how can you tell?) [look in scopy] turn grove led on. If button is not pressed, turn it off
  - test that this works.
 
 ## Simulate additional long process
 - Add a delay(1000) to your loop.
 - add Serial statements before and after the delay
 - test if lighting led still works. Why or why not?
-answer here: __________
+answer here: _it only updates its state for a instant, every 1s, so it needs to be pressed or not during that instant for the change to be registered._________
 
 ## Use interrupt to light led
 - Add code to create an interrupt pin (why can't it be the button pin?). Use a variable for this.

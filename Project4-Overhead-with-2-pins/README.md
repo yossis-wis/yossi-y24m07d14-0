@@ -10,8 +10,8 @@
 ## Exercise 1
 - measure the delay between the two digitalWrite() functions using the logic analyzer.
 Paste screenshots below:
-
-enter the delay in usec here:  __________
+![alt text](image.png)
+enter the delay in usec here:  _3.2us_________
 
 ## write a 2nd program that does the following:
 - based on the first program, add a calculation (adding one to a variable for example) and store the result in a variable between the two digitalWrite() functions.
@@ -19,8 +19,8 @@ enter the delay in usec here:  __________
 ## Exercise 2
 - measure the delay the originated from the calculation between the two digitalWrite() functions using the logic analyzer.
 Paste screenshots below:
-
-enter the delay in usec here:  __________
+![alt text](image-1.png)
+enter the delay in usec here:  __3.6us________
 
 ## Git
  - Commit and push the two programs into the repository

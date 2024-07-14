@@ -19,7 +19,7 @@ answer here: _it only updates its state for a instant, every 1s, so it needs to 
 ## Use interrupt to light led
 - Add code to create an interrupt pin (why can't it be the button pin?). Use a variable for this.
 - Short the interrupt pin with the button pin
-- test. Does it work?
+- test. Does it work? yes
 
 ## Exercises
  - commit and upload your code in this project folder.

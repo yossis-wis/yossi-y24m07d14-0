@@ -25,8 +25,7 @@
 int ledPin_13 = 13;
 int ledPin_12 = 12;
 // int delayTime = 10;
-int x = 1;
-int y;
+int y = 1;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -38,8 +37,9 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(ledPin_13, HIGH);  // turn the LED on (HIGH is the voltage level)
+  y = y + 3;
   digitalWrite(ledPin_12, HIGH);  // turn the LED on (HIGH is the voltage level)
-  y = x + 3;
+  
   // delayMicroseconds(delayTime);                      // wait for a second
   digitalWrite(ledPin_13, LOW);   // turn the LED off by making the voltage LOW
   digitalWrite(ledPin_12, LOW);   // turn the LED off by making the voltage LOW

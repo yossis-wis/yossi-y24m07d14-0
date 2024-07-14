@@ -20,7 +20,7 @@ enter the delay in usec here:  _3.2us_________
 - measure the delay the originated from the calculation between the two digitalWrite() functions using the logic analyzer.
 Paste screenshots below:
 ![alt text](image-1.png)
-enter the delay in usec here:  __3.6us________
+enter the delay in usec here:  __3.6us - 3.2us = .4us________
 
 ## Git
  - Commit and push the two programs into the repository

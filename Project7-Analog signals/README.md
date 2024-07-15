@@ -35,6 +35,8 @@ The purpose of this project is to dim and increase the led light using the rotar
 
 - commit and push both .ino files and their folders to your repository
 
+![I used this to measure the time to do an analog output read](image.png)
+
 
 
 

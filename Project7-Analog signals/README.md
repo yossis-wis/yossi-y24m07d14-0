@@ -37,6 +37,8 @@ The purpose of this project is to dim and increase the led light using the rotar
 
 ![I used this to measure the time to do an analog output read](image.png)
 
+![oscilloscope](image-1.png)
+
 
 
 

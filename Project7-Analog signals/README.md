@@ -39,6 +39,6 @@ The purpose of this project is to dim and increase the led light using the rotar
 
 ![oscilloscope](image-1.png)
 
-
+![first pass with the voltometer](image-2.png)
 
 

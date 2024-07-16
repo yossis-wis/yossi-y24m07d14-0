@@ -20,5 +20,7 @@ void setup() {
 
 void loop() {
   rotary1 = analogRead(rotary0);
-  myServo.write(rotary1/6.5);
+  int servoAngle = map(rotary1, 0, 1023, 0, 150);
+  myServo.write(servoAngle);
+  //myServo.write(rotary1/6.5);
 }

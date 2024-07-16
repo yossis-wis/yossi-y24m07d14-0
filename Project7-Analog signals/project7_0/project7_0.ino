@@ -1,3 +1,5 @@
+#include <Servo.h>
+
 #include <MD_PWM.h>
 
 // Define the pin numbers

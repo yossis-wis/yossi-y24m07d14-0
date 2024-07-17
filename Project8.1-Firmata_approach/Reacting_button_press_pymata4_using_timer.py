@@ -27,11 +27,11 @@ def the_callback(data):
     """
     date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data[CB_TIME]))
     print(f'Pin: {data[CB_PIN]} Value: {data[CB_VALUE]} Time Stamp: {date}')
-    board.digital_write(LED_PIN,1)
-
-    # Start the initial timer
-    timer = threading.Timer(OFF_TIME, turnitoff)
-    timer.start()
+    if data[CB_VALUE]:
+        board.digital_write(LED_PIN,1)
+        # Start the initial timer
+        timer = threading.Timer(OFF_TIME, turnitoff)
+        timer.start()
 
 
 def digital_in(my_board, pin):

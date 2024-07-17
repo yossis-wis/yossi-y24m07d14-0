@@ -7,7 +7,7 @@ import PySimpleGUI as sg
 DIGITAL_PIN = 6  # Arduino pin number
 LED_PIN = 4
 
-POLL_TIME = 5  # Number of seconds between polls
+POLL_TIME = .2  # Number of seconds between polls
 OFF_TIME = 5  # Number of seconds between polls
 
 CB_PIN_MODE = 0
@@ -15,15 +15,16 @@ CB_PIN = 1
 CB_VALUE = 2
 CB_TIME = 3
 
+global led0
+
 # Define the layout for the window
 layout = [
-    [sg.Output(size=(60, 20))],  # Output area to display messages
-    [sg.Button('Print Hello'), sg.Button('Exit')]  # Buttons to trigger actions
+    [sg.Text('', size=(20, 1), key='-TEXT-')],  # Text element to display messages
+    [sg.Button('Write Hello'), sg.Button('Exit')]  # Buttons to trigger actions
 ]
 
 # Create the window
 window = sg.Window('Hello Window', layout)
-
 
 
 def turnitoff():
@@ -37,6 +38,9 @@ def the_callback(data):
 
     :param data: [pin, current reported value, pin_mode, timestamp]
     """
+    global led0
+    led0 = data[CB_VALUE]
+
     date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data[CB_TIME]))
     print(f'Pin: {data[CB_PIN]} Value: {data[CB_VALUE]} Time Stamp: {date}')
     if data[CB_VALUE]:
@@ -56,6 +60,8 @@ def digital_in(my_board, pin):
      :param pin: Arduino pin number
      """
 
+    global led0
+
     # set the pin mode
     my_board.set_pin_mode_digital_input(pin, callback=the_callback)
 
@@ -67,7 +73,15 @@ def digital_in(my_board, pin):
             date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time_stamp))
             # value
             print(f'Polling - last value: {value} received on {date} ')
+
+            event, values = window.read()
+            if event == sg.WIN_CLOSED or event == 'Exit':  # If user closes window or clicks Exit
+                break
+            if event == 'Write Hello':
+                # add text that led on performed in response to the button press
+                window['-TEXT-'].update(led0)  # Write "Hello" to the text element
             time.sleep(POLL_TIME)
+
         except KeyboardInterrupt:
             board.shutdown()
             window.close()

@@ -7,6 +7,7 @@ DIGITAL_PIN = 6  # Arduino pin number
 LED_PIN = 4
 
 POLL_TIME = 5  # Number of seconds between polls
+OFF_TIME = 5  # Number of seconds between polls
 
 CB_PIN_MODE = 0
 CB_PIN = 1
@@ -29,7 +30,7 @@ def the_callback(data):
     board.digital_write(LED_PIN,1)
 
     # Start the initial timer
-    timer = threading.Timer(POLL_TIME, turnitoff)
+    timer = threading.Timer(OFF_TIME, turnitoff)
     timer.start()
 
 
@@ -71,6 +72,4 @@ try:
 except KeyboardInterrupt:
     # Shutdown board and cancel timers on interrupt
     board.shutdown()
-    for timer in timers:
-        timer.cancel()
     sys.exit(0)

@@ -25,9 +25,7 @@ def the_callback(data):
     date = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(data[CB_TIME]))
     print(f'Pin: {data[CB_PIN]} Value: {data[CB_VALUE]} Time Stamp: {date}')
     board.digital_write(LED_PIN,1)
-    time.sleep(1000)
-    board.digital_write(LED_PIN,0)
-
+    
 
 def digital_in(my_board, pin):
     """
